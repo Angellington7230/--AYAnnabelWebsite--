@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/* Importando Fontes */
+/* Josefin Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+html {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+/* Cabeçalho - PC */
+@media screen and (max-width: 2000px) { 
+    header {
+        background-color: rgb(255, 255, 255);
+        margin: 0;
+
+        font-family: "Josefin Sans";
+        font-size: 1.1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 10vh;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+
+    header #menu {
+        display: none;
+    }
+
+    header  .nav  {
+        color: #555;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:right;
+        align-content:center;
+        gap: 2em;
+        text-decoration: none;
+    }
+
+    .nav .media a {
+        text-decoration: none;
+        color: #555555;
+        transition: 0.2s;
+    }
+
+    .nav .media a:hover {
+        text-decoration: none;
+        color: #CCCCCC;
+    }
+
+    .nav i {
+        margin-left:0;
+        color: #555555;
+        transition: 0.3s;
+    }
+
+    .nav i:hover {
+        text-decoration: none;
+        color: #eaeaea;
+    }
+
+
+    
+    /* Cabeçalho Android */ 
+    @media screen and (max-width: 774px) {
+        header {
+            background-color: rgba(255, 0, 0, 0);
+            margin: 0;
+    
+            font-family: "Josefin Sans";
+            font-size: 1.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            height: 50vh;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+
+            overflow: hidden;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            
+            display: block;
+        }
+    
+        header #menu {
+            display: none;
+        }
+    
+        header  .nav  {
+            color: #555;
+    
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content:right;
+            align-content:center;
+            gap: 1.2em;
+            text-decoration: none;
+
+
+            text-align: center;
+        }
+    }
+
+
+
+
+
+    /* Central */
+
+
+    #Home-Page {
+        margin: 0px;
+        padding-top: 2vh;
+        background-color: rgb(255, 255, 255);
+        height: 100vh;
+        display: flex;
+
+        background-image: url(../src/images/vanilla2.png);
+        background-attachment: fixed;
+        background-size: cover;
+
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        z-index: 1;
+    }
+
+
+
+    #Home-Page > #central-title img{
+        height: calc(100vh - 25vw);
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+
+    }
+}
+
+
+@media screen and (max-width: 774px) {
+    #Home-Page > #central-title img{
+        height: 20em;
+    }
+
+    /* Cabeçalho Mobile */
+
+}
+
+/* Rodapé */
+
+footer {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    display: flex;
+
+    font-size: 0.8em;
+    color: #AAAAAA;
+    justify-content: center;
+}
+
+footer #rodapé {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Opacidade inicial */
+    }
+    to {
+      opacity: 100; /* Opacidade final */
+    }
+  }
