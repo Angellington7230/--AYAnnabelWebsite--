@@ -96,14 +96,16 @@ body {
             display: block;
         }
     
-        header #menu {
-            display: none;
+        header #menu button {
+            display: block;
         }
+
+        
     
         header  .nav  {
             color: #555;
     
-            display: flex;
+            display: none;
             flex-wrap: wrap;
             flex-direction: column;
             justify-content:right;
@@ -144,10 +146,11 @@ body {
 
 
     #Home-Page > #central-title img{
-        height: calc(100vh - 25vw);
+        max-height: calc(100vh - 25vw);
+        min-height: auto;
         opacity: 0;
         animation: fadeIn 1s ease forwards;
-
+        object-fit: contain;
     }
 }
 

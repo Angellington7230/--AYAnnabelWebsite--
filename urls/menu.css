@@ -17,7 +17,7 @@ body {
 
 
 
-@media screen and (min-width: 769px) and (max-width: 12200px) {
+@media screen and (min-width: 769px){
     /* Menu Principal - Configurações Gerais*/
 
     header {
@@ -27,7 +27,7 @@ body {
         width: 100%;
     }
     #men {
-        display: none;
+        display: flex;
     }
     #MenuPrincipal {
        background-color: rgb(255, 255, 255);
@@ -38,7 +38,6 @@ body {
        display: flex;
        justify-content: center;
        align-items: center;
-
        height: 10vh;
        position: fixed;
        width: 100%;
