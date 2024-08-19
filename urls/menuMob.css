@@ -20,7 +20,7 @@ body {
         justify-content: left;
         text-align: center;
         position: fixed;
-        width: 50%;
+        width: 30%;
 
         z-index: 1;
 
@@ -30,7 +30,7 @@ body {
     }*/
     
     #men > button {
-        margin: 10px;
+        margin: 6px;
         width: 7em;
         border-radius: 6px;
         border: none;
@@ -68,6 +68,12 @@ body {
     #Sec nav.itens li:hover {
         background-color: #e0e0e0;
     }
+    #Sec .itens ul {
+        padding: 0;
+    }
+    #Sec .itens a {
+        padding: 0;
+    }
     #Sec nav.itens li, nav a {
         list-style: none;
         text-decoration: none;
@@ -75,6 +81,11 @@ body {
         font-size: 20px;
 
         padding: 0.7em;
+    }
+
+    #media li {
+        background-color: #ffffff;
+        
     }
 
 }
