@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* -- Fonts --*/
+/* Josefin Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* -- General CSS Reset --*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -- Default FONTS and COLORS */
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #F8F8F8;
+    --Josefin-Sans: 'Josefin Sans', 'sans-serif';
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: var(--Josefin-Sans);
+    color: #555;;
+}
+
+/* -- CSS Code for Desktop */
+/* Header */
+@media (width >= 774px) {
+    header {
+        background-color: var(--primary-color);
+        width: 100%;
+        position: fixed;
+        height: fit-content;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    
+        justify-content: center;
+        align-items: center;
+    }
+    .menu {
+        display: none;
+    }
+    
+    .menu_items, a {
+        list-style: none;
+        text-decoration: none;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        justify-content: center;
+        align-items: center;
+    
+        color: #555;
+        font-size: 1.05em;
+        
+        gap: 2em;
+        transition: 0.2s;
+    }
+    .menu_items, a:hover {
+        text-decoration: none;
+        color: #CCCCCC;
+        transform: scale(1.05);
+    }
+    
+    .menu_items .social_medias {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        text-decoration: none;
+    }
+    
+    /* -- Meio da Página*/
+    main {
+        background-color: aqua;
+        height: 100vh;
+        width: 100%;
+        background-image: url(../src/img/vanilla2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main > .image img{
+        width: 350px;
+        height: 350px;
+    }
+    
+    /* -- Footer -- */
+    footer {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+        justify-content:center;
+        align-items: center;
+    }  
+}
+
