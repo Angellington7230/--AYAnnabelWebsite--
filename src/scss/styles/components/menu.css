@@ -7,7 +7,71 @@ body {
 }
 @media (max-width: 774px) {
   body {
-    background-color: red;
+    background-color: #CCCCCC;
+    margin: 0;
+  }
+  body header {
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    font-size: 21px;
+  }
+  body header nav {
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  body header nav ul {
+    text-decoration: none;
+    list-style: none;
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ajustado para alinhamento correto */
+    text-align: right;
+  }
+  body header nav li {
+    margin: 0; /* Remover a margem indesejada */
+    width: 100%; /* Fazer o li ocupar 100% da largura disponível */
+    padding: 10px 0; /* Pequeno padding para criar espaço entre os itens */
+  }
+  body header nav li a {
+    display: block; /* Faz o link ocupar toda a largura do li */
+    text-decoration: none;
+    color: #555555;
+    transition: transform 0.3s ease;
+    width: 100%;
+    padding: 10px 20px; /* Padding para distanciar o texto da borda */
+    box-sizing: border-box; /* Garante que o padding não afete o tamanho total */
+  }
+  body header nav li a:hover {
+    text-decoration: none;
+    transform: scale(1.02);
+  }
+  body header nav li:hover {
+    background-color: #CCCCCC;
+  }
+  body header nav #social {
+    margin: 0; /* Remove a margem */
+    width: 100%; /* Faz com que ocupe toda a largura disponível */
+    padding: 10px 0; /* Mesma altura que o li para manter o espaçamento consistente */
+    background-color: transparent; /* Não interfere com o fundo do li */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  body header nav #social a {
+    display: block; /* O link dentro de #social deve ser clicável */
+    text-decoration: none;
+    color: #555555;
+    padding: 10px 20px; /* Padding para distanciar o texto da borda */
+    transition: transform 0.3s ease;
+  }
+  body header nav #social a:hover {
+    text-decoration: none;
   }
 }
 @media (min-width: 775px) {
@@ -33,6 +97,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
+    text-align: center;
   }
   body header nav ul a {
     display: inline-block;
