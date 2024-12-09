@@ -15,13 +15,26 @@ body {
     background-color: #fff;
     width: 100vw;
     font-size: 21px;
+    flex-wrap: wrap;
   }
   body header nav {
+    height: auto;
+  }
+  body header nav span #menu {
+    margin: 12px;
+    width: 8em;
+    padding: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    background-color: #d3d3d3;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  body header nav ul {
     height: 50vh;
     overflow-y: auto;
     overflow-x: hidden;
-  }
-  body header nav ul {
     text-decoration: none;
     list-style: none;
     margin: 0; /* Remove a margem padrão */
@@ -31,6 +44,7 @@ body {
     align-items: center;
     justify-content: flex-start; /* Ajustado para alinhamento correto */
     text-align: right;
+    display: flex;
   }
   body header nav li {
     margin: 0; /* Remover a margem indesejada */
@@ -48,7 +62,6 @@ body {
   }
   body header nav li a:hover {
     text-decoration: none;
-    transform: scale(1.02);
   }
   body header nav li:hover {
     background-color: #CCCCCC;
@@ -88,6 +101,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 21px;
+  }
+  body header span {
+    display: none;
   }
   body header nav ul {
     text-decoration: none;

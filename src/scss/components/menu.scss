@@ -5,6 +5,7 @@ $mobile: 775px;
 
 // Pattern Colors
 $pk-color: #fff;
+$sk-color: #d3d3d3;
 
 
 // Font Color
@@ -19,82 +20,111 @@ body {
 
     @media(max-width: $desktop){
         background-color: $font-color-hover;
-margin: 0;
+        margin: 0;
 
-header {
-    position: fixed;
-    background-color: $pk-color;
-    width: 100vw;
-    font-size: 21px;
+        header {
+            position: fixed;
+            background-color: $pk-color;
+            width: 100vw;
+            font-size: 21px;
+            flex-wrap: wrap;
 
-    nav {
-        height: 50vh;
-        overflow-y: auto;
-        overflow-x: hidden;
+            nav {
+                height: auto;
+                // margin-top: 12px;
+                // padding: 21px;
 
-        ul {
-            text-decoration: none;
-            list-style: none;
-            margin: 0;  /* Remove a margem padrão */
-            padding: 0; /* Remove o padding padrão */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;  /* Ajustado para alinhamento correto */
-            text-align: right;
-        }
 
-        li {
-            margin: 0; /* Remover a margem indesejada */
-            width: 100%;  /* Fazer o li ocupar 100% da largura disponível */
-            padding: 10px 0;  /* Pequeno padding para criar espaço entre os itens */
 
-            a {
-                display: block;  /* Faz o link ocupar toda a largura do li */
-                text-decoration: none;
-                color: $font-color;
-                transition: transform 0.3s ease;
-                width: 100%;
-                padding: 10px 20px;  /* Padding para distanciar o texto da borda */
-                box-sizing: border-box;  /* Garante que o padding não afete o tamanho total */
+                span {
+                    // padding: 21px;
+                  
+                    
+                    
+                    #menu {
+                        margin: 12px;
+                        width: 8em;
+                        padding: 20px;
+                        font-size: 12px;
+                        text-decoration: none;
+                        border: none;
+                        background-color: $sk-color;
+
+                        border-radius: 12px;
+
+                        cursor: pointer;
+                        }
+                }
+
+                ul {
+                    height: 50vh;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+
+                    text-decoration: none;
+                    list-style: none;
+                    margin: 0;  /* Remove a margem padrão */
+                    padding: 0; /* Remove o padding padrão */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;  /* Ajustado para alinhamento correto */
+                    text-align: right;
+
+                    display: flex;
+                }
+
+                li {
+                    margin: 0; /* Remover a margem indesejada */
+                    width: 100%;  /* Fazer o li ocupar 100% da largura disponível */
+                    padding: 10px 0;  /* Pequeno padding para criar espaço entre os itens */
+
+                    a {
+                        display: block;  /* Faz o link ocupar toda a largura do li */
+                        text-decoration: none;
+                        color: $font-color;
+                        transition: transform 0.3s ease;
+                        width: 100%;
+                        padding: 10px 20px;  /* Padding para distanciar o texto da borda */
+                        box-sizing: border-box;  /* Garante que o padding não afete o tamanho total */
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                        // transform: scale(1.02);
+                    }
+
+                    &:hover {
+                        background-color: $font-color-hover;
+                    }
+                }
+                #social {
+                    margin: 0; /* Remove a margem */
+                    width: 100%; /* Faz com que ocupe toda a largura disponível */
+                    padding: 10px 0;  /* Mesma altura que o li para manter o espaçamento consistente */
+                    background-color: transparent; /* Não interfere com o fundo do li */
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    a {
+                        display: block;  /* O link dentro de #social deve ser clicável */
+                        text-decoration: none;
+                        color: $font-color;
+                        padding: 10px 20px;  /* Padding para distanciar o texto da borda */
+                        transition: transform 0.3s ease;
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                    }
+
+                
+                }
             }
-
-            a:hover {
-                text-decoration: none;
-                transform: scale(1.02);
-            }
-
-            &:hover {
-                background-color: $font-color-hover;
-            }
-        }
-        #social {
-            margin: 0; /* Remove a margem */
-            width: 100%; /* Faz com que ocupe toda a largura disponível */
-            padding: 10px 0;  /* Mesma altura que o li para manter o espaçamento consistente */
-            background-color: transparent; /* Não interfere com o fundo do li */
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-
-            a {
-                display: block;  /* O link dentro de #social deve ser clicável */
-                text-decoration: none;
-                color: $font-color;
-                padding: 10px 20px;  /* Padding para distanciar o texto da borda */
-                transition: transform 0.3s ease;
-            }
-
-            a:hover {
-                text-decoration: none;
-            }
-
-          
-        }
-    }
-} 
+        } 
     }
 
     // Desktop Style
@@ -119,6 +149,9 @@ header {
 
             font-size: 21px;
 
+            span {
+                display: none;
+            }
 
             nav ul{
 
