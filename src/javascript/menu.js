@@ -1,46 +1,15 @@
-// Capturar o botão Menu
-menu = document.querySelector("header #men button");
-menu_principal = document.querySelector("#MenuPrincipal")
+// Catch
+const menu = document.getElementById("menu");
 
-// Verificar tamanho da tela
-function verificarTamanhoTela(time) {
-    if (window.innerWidth <= 768){
-        alert("Mobile")
-    } else {
-        alert("PC")
-    }
-}
+menu.addEventListener("click", function(e){
+    const items = document.getElementById("menu_items");
 
-// Animar Menu
-function animarMenu() {
-    menu_principal.style.transition = "transform 0.3s ease"
-    menu_principal.style.transform = "translateY(0px)"
-}
+    const currentDisplay = window.getComputedStyle(items).display;
+    const currentHeight = window.getComputedStyle(items).height
 
+    items.classList.toggle("show")
+   
+    
+    
 
-// Adicionar a função no Menu de desligar e ligar
-function abrirMenu() {
-        if (menu_principal.style.display === 'none' || menu_principal.style.display === ''){
-            menu_principal.style.display = 'flex';
-            requestAnimationFrame(() => {
-                animarMenu()
-            })
-        } else {
-            // Animar o menu
-            menu_principal.style.transition = "transform 0.3s ease"
-            menu_principal.style.transform = "translateY(-50vh)"
-            setTimeout(() => {
-                menu_principal.style.display = ''
-                menu_principal.style.display = 'none';
-            }, 300)
-            
-        }     
-    }
-
-// Chamar a função menu ao clicar
-menu.addEventListener('click', abrirMenu)
-
-
-
-
-
+})
