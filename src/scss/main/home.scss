@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/* Fonts for use*/
+$josefin-sans: "Josefin Sans";
 
 body {
     display: flex;
@@ -6,7 +9,7 @@ body {
     main {
         // background-color: aquamarine;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-image: url("../../../images/vanilla2.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -17,7 +20,7 @@ body {
         align-items: center;
         
         img{
-            max-width: 450px;
+            max-width: 400px;
             min-width: 300px;
             display: flex;
             justify-content: center;
