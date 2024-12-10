@@ -5,7 +5,7 @@ body {
   margin: 0;
   line-height: none;
 }
-@media (max-width: 774px) {
+@media (max-width: 775px) {
   body {
     background-color: #CCCCCC;
     margin: 0;
@@ -27,7 +27,7 @@ body {
     font-size: 12px;
     text-decoration: none;
     border: none;
-    background-color: #343452;
+    background-color: #d3d3d3;
     border-radius: 12px;
     cursor: pointer;
     transition: 0.2s ease;
@@ -39,7 +39,7 @@ body {
   }
   body header nav ul {
     z-index: 1;
-    height: 10vh;
+    height: 0vh;
     overflow-y: auto;
     overflow-x: hidden;
     text-decoration: none;
@@ -51,12 +51,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     text-align: right;
-    display: none;
-    transition: height 2s ease-in-out;
-  }
-  body header nav ul.show {
-    height: 50vh;
     display: flex;
+    transition: height 2s ease-in-out;
   }
   body header nav li {
     margin: 0; /* Remover a margem indesejada */
@@ -99,7 +95,7 @@ body {
     text-decoration: none;
   }
 }
-@media (min-width: 775px) {
+@media (min-width: 774px) {
   body {
     background-color: green;
   }
