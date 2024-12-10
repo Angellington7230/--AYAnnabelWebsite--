@@ -5,6 +5,7 @@ $josefin-sans: "Josefin Sans";
 body {
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1s ease-out; 
 
     main {
         // background-color: aquamarine;
@@ -26,5 +27,16 @@ body {
             justify-content: center;
             align-items: center;
         }
+    }
+
+    
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Opacidade inicial */
+    }
+    to {
+      opacity: 100; /* Opacidade final */
     }
 }

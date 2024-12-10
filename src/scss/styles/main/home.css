@@ -3,6 +3,7 @@
 body {
   display: flex;
   flex-direction: column;
+  animation: fadeIn 1s ease-out;
 }
 body main {
   height: 100vh;
@@ -21,6 +22,15 @@ body main img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opacidade inicial */
+  }
+  to {
+    opacity: 100; /* Opacidade final */
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
