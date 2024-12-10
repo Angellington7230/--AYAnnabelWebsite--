@@ -1,0 +1,27 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    main {
+        // background-color: aquamarine;
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../../images/vanilla2.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img{
+            max-width: 450px;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
