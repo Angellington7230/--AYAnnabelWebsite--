@@ -99,7 +99,6 @@ body {
     position: fixed;
     background-color: #fff;
     width: 100vw;
-    padding: 0.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

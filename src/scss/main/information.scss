@@ -1,0 +1,107 @@
+/* Áa !*/ 
+// Media Queries
+$desktop: 774px;
+$mobile: 775px;
+
+// Pattern Colors
+$pk-color: #fff;
+$sk-color: #d3d3d3;
+$tk-color: #EFEFEF;
+
+
+
+// Font Color
+$font-color: #555555;
+$font-color-hover: #CCCCCC;
+
+// Inter Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$inter: "Inter";
+
+body {
+    // Reset
+    padding: 0;
+    margin: 0;
+    line-height: none;
+
+    @media(max-width: $mobile){
+        // background-color: $font-color-hover;
+        
+    }
+
+    // Desktop Style
+    @media (min-width: $desktop) {
+        section {
+            padding-top: 7vh;
+        }
+        #top-header {
+            height: 30vh;
+            // background-color: aqua;
+            background-image: url("../../../assets/images/background1.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            
+            div {
+                // background-color: aquamarine;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        
+        
+                width: 50vw;
+        
+                h1 {
+                    // background-color: blanchedalmond;
+        
+                    font-size: 55px;
+                    font-family: $inter;
+                    font-weight: normal;
+                    margin: -10px;
+                }
+                #ornament {
+                    display: flex;
+                    flex-direction: center;
+                    height: 5vh;
+                    width: 100%;
+                    // background-color: blue;
+                }
+                #filter {
+                    display: flex;
+                    flex-direction: row;
+                    flex: wrap;
+                    justify-content: space-evenly;
+                    margin: 0;
+        
+                    button {
+                        width: 125px;
+                        height: 52px;
+                        border: none;
+                        border-radius: 4px;
+                        color: $font-color;
+                        background-color: $tk-color;
+                        font-size: 125%;
+                    }
+                    button:hover {
+                        transform: scale(1.05);
+                        cursor: pointer;
+                        background-color: $sk-color
+                    }
+                }
+            
+            }
+            
+        }
+
+    }
+}
+
