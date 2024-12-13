@@ -199,6 +199,79 @@ body {
                     color: $pk-color;
                     font-family: $josefin-sans;
                 }
+                .card-default {
+                    background-color: $pk-color;
+                    font-family: $inter;
+                    width: 85%;
+                    height: auto;
+                    padding: 10px 2px 10px 2px;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .back-default {
+                        background: linear-gradient(to right, $pk-color, $sk-color);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 92%;
+                        width: 97.5%;
+                        .information {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: start;
+                            flex-direction: column;
+                            margin: 0px;
+                            padding: 20px; 
+                            .info-title {
+                                margin: 0;
+                                line-height: 1;
+                                width: 60%;
+                                font-weight: 700;
+                                font-size: 22px;
+                            }
+                            .info-content {
+                                margin: 0;
+                                line-height: 1;
+                                width: 60%;
+                                font-weight: 700;
+                                font-size: 22px;
+                                .content {
+                                    display: flex;
+                                    margin: 0;
+                                    flex-direction: column;
+                                    text-align: left;
+                                    line-height: 2;
+                                    font-size: 16px;
+                                    color: $font-color2;
+                                    font-weight: 500;
+                                    p {
+                                        margin: 0;
+                                    }
+                                }
+                                .info-album {
+                                    display: flex;
+                                    flex-direction: row;
+                                    // background-color: aqua;
+                                    gap: 21px;
+                                    img {
+                                        width: 20%;
+                                        height: 20%;
+                                        border-radius: 4px;
+                                        border: 1px solid rgba(0, 0, 0, 0.445);
+                                        transition: 0.25s ease-in-out;
+                                    }
+                                    img:hover {
+                                        opacity: 50%;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }                           
+                        }
+                        
+                    }
+
+                }
+
                 .card-live {
                     background-color: $pk-color;
                     font-family: $inter;
