@@ -6,6 +6,7 @@ $mobile: 775px;
 // Pattern Colors
 $pk-color: #fff;
 $sk-color: #d3d3d3;
+$sk-color-50: #ffffff79;
 
 
 // Font Color
@@ -42,7 +43,7 @@ body {
                         font-size: 12px;
                         text-decoration: none;
                         border: none;
-                        background-color: $sk-colorto;
+                        background-color: $sk-color;
                         border-radius: 12px;
                         cursor: pointer;
 
@@ -54,6 +55,9 @@ body {
                         padding: 21px;
                         background-color: $font-color-hover;
                     }
+                    // #menu:active {
+                    //     text-decoration: underline;
+                    // }
                 // ul {
                 //     display: none;
 
@@ -144,7 +148,7 @@ body {
         header {
             position: fixed;
 
-            background-color: $pk-color;
+            background-color: $sk-color-50;
             width: 100vw;
             // padding: 0.5em;
 
