@@ -7,7 +7,6 @@ body {
 }
 @media (max-width: 775px) {
   body {
-    background-color: #CCCCCC;
     margin: 0;
   }
   body header {
@@ -96,9 +95,6 @@ body {
   }
 }
 @media (min-width: 774px) {
-  body {
-    background-color: green;
-  }
   body header {
     position: fixed;
     background-color: #fff;

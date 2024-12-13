@@ -1,0 +1,13 @@
+$font-color: #AAAAAA;
+$font-color-hover: #CCCCCC;
+
+body {
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Josefin Sans";
+        color: $font-color;
+        font-size: 16px;
+    }
+}

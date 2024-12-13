@@ -19,7 +19,7 @@ body {
     line-height: none;
 
     @media(max-width: $mobile){
-        background-color: $font-color-hover;
+        // background-color: $font-color-hover;
         margin: 0;
 
         header {
@@ -141,11 +141,6 @@ body {
 
     // Desktop Style
     @media (min-width: $desktop) {
-
-        background-color: green;
-
-
-
         header {
             position: fixed;
 
