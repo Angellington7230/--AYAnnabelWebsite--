@@ -213,9 +213,10 @@ body {
                         
                         .information {
                             display: flex;
+                            flex-wrap: wrap;
                             flex-direction: row;
                             justify-content: space-between;
-                            align-items: center;
+                            align-items: start;
                             height: 100%;
                             .col1 {
                                 background-color: $pk-color;
@@ -230,10 +231,13 @@ body {
                             .col2 {
                                 background-color: $pk-color;
                                 padding: 10px;
+                                margin: 20px;
                                 margin-right: 5%;
                                 height: 100%;
                                 .media {
                                     margin: 0;
+                                    height: auto;
+                                    width: auto;
                                     // height: 70%;
                                     iframe {
                                         margin: 0;

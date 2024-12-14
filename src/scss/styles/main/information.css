@@ -155,9 +155,10 @@ body {
   }
   body #background2 article .card-media .wallpaper .information {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     height: 100%;
   }
   body #background2 article .card-media .wallpaper .information .col1 {
@@ -173,11 +174,14 @@ body {
   body #background2 article .card-media .wallpaper .information .col2 {
     background-color: #fff;
     padding: 10px;
+    margin: 20px;
     margin-right: 5%;
     height: 100%;
   }
   body #background2 article .card-media .wallpaper .information .col2 .media {
     margin: 0;
+    height: auto;
+    width: auto;
   }
   body #background2 article .card-media .wallpaper .information .col2 .media iframe {
     margin: 0;
