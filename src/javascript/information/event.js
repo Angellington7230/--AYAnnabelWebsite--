@@ -24,6 +24,8 @@ event.addEventListener("click", function(e){
             console.log(posts);
 
             posts.forEach((post) => {
+
+
                 const background2 = document.getElementById("background2");
                
                 let article = document.createElement("article");
@@ -53,50 +55,61 @@ event.addEventListener("click", function(e){
                 content.classList.add("content");
 
                 post.description.forEach((description) => {
-                    if (description.image === null) {
+
+
+                    if (description.text.includes("https") || description.text.includes("http")){
+                        let paragraph = document.createElement("p");
+                        let link = document.createElement("a");
+                        link.href = description.text;  
+                        link.textContent = description.text; 
+                        paragraph.appendChild(link);
+                        content.appendChild(paragraph); 
+                    } else if (description.image === null){
                         let paragraph = document.createElement("p");
                         paragraph.textContent = description.text;
                         content.appendChild(paragraph);
                     } else {
                         let info_album = document.createElement("div");
                         info_album.classList.add("info-album");
-
+                
                         let img = document.createElement("img");
                         img.src = description.image;
-                        img.alt = description.text;
-
+                        img.alt = description.text;  // A descrição da imagem pode ser o texto
+                
                         let paragraph = document.createElement("p");
                         paragraph.textContent = description.text;
-
+                
                         info_album.appendChild(img);
                         info_album.appendChild(paragraph);
-
-                        content.appendChild(info_album);
+                
+                        content.appendChild(info_album); 
                     }
                 });
+                
 
-                // Adicionando link externo (se houver)
-                let linkContainer = content.querySelector('.info-link');
-                if (!linkContainer) {
-                    linkContainer = document.createElement('div');
-                    linkContainer.classList.add('info-link');
-                    let externalLink = post.description.find(d => d.text.includes("http"));
-                    if (externalLink) {
-                        let a = document.createElement("a");
-                        a.href = externalLink.text;
-                        a.target = "_blank";
-                        a.textContent = externalLink.text;
-                        linkContainer.appendChild(a);
-                        content.appendChild(linkContainer);
-                    }
-                }
+                // adding link if have
+                // let linkContainer = content.querySelector('.info-link');
+                // if (!linkContainer) {
+                //     linkContainer = document.createElement('div');
+                //     linkContainer.classList.add('info-link');
+                //     let externalLink = post.description.find(d => d.text.includes("http"));
+                //     if (externalLink) {
+                //         let a = document.createElement("a");
+                //         a.href = externalLink.text;
+                //         a.target = "_blank";
+                //         a.textContent = externalLink.text;
+                //         linkContainer.appendChild(a);
+                //         content.appendChild(linkContainer);
+                //     }
+                // }
 
                 information.appendChild(info_title);
                 information.appendChild(info_content);
                 info_content.appendChild(content);
 
                 card_default.appendChild(back_default);
-                card_default.appendChild(information);
+                back_default.appendChild(information)
+                // card_default.appendChild(informationz);
                 
                 article.appendChild(date_pub);
                 article.appendChild(card_default);
@@ -104,6 +117,8 @@ event.addEventListener("click", function(e){
                 background2.appendChild(article);
             });
         })
+
+        
         .catch((err) => {
             console.error('Failed to Load the json.', err);
         });  
