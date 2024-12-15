@@ -23,8 +23,11 @@ live.addEventListener("click", function handler(e){
             const posts = response.posts;
             console.log(posts);
 
+            const background2 = document.getElementById("background2");
+            background2.innerHTML = ''
+
             posts.forEach((post) => {
-                const background2 = document.getElementById("background2");
+             
                 const livediv = `
                     <article class="live">
                         <p class="date-pub">${post.date}</p>

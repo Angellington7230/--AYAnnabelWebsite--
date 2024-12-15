@@ -7,7 +7,7 @@
 
 
 
-event.addEventListener("click", function(e){
+event.addEventListener("click", function handler(e){
     const event_data = "../data/information/event.json";
 
     alert("Clicando em live");
@@ -22,11 +22,15 @@ event.addEventListener("click", function(e){
         .then((response) => {
             const posts = response.posts;
             console.log(posts);
+            const background2 = document.getElementById("background2");
+            background2.innerHTML =  ''
 
             posts.forEach((post) => {
 
 
-                const background2 = document.getElementById("background2");
+             
+
+
                
                 let article = document.createElement("article");
                 article.classList.add("event");
@@ -57,14 +61,28 @@ event.addEventListener("click", function(e){
                 post.description.forEach((description) => {
 
 
-                    if (description.text.includes("https") || description.text.includes("http")){
-                        let paragraph = document.createElement("p");
-                        let link = document.createElement("a");
-                        link.href = description.text;  
-                        link.textContent = description.text; 
-                        paragraph.appendChild(link);
-                        content.appendChild(paragraph); 
-                    } else if (description.image === null){
+                    if (description.text == null || description.text == "") {
+                        let breakline = document.createElement("p");
+                        breakline.innerHTML = "<br>"
+                        content.appendChild(breakline);
+                    }
+
+
+                    if (description.text && description.image && description.link){
+                        let paragraph = document.createElement("div");
+                        paragraph.innerHTML = 
+                        `
+                        <div class="info-album">
+
+                            <a href="${description.link}" target="_blank" ><img src="${description.image}" alt="${description.text}"></a>
+                            <p>${description.text}</p>
+                        </div>
+                        `
+                        content.appendChild(paragraph)
+                    }
+                    
+                    
+                    else if (description.image === null){
                         let paragraph = document.createElement("p");
                         paragraph.textContent = description.text;
                         content.appendChild(paragraph);
@@ -85,24 +103,7 @@ event.addEventListener("click", function(e){
                         content.appendChild(info_album); 
                     }
                 });
-                
-
-                // adding link if have
-                // let linkContainer = content.querySelector('.info-link');
-                // if (!linkContainer) {
-                //     linkContainer = document.createElement('div');
-                //     linkContainer.classList.add('info-link');
-                //     let externalLink = post.description.find(d => d.text.includes("http"));
-                //     if (externalLink) {
-                //         let a = document.createElement("a");
-                //         a.href = externalLink.text;
-                //         a.target = "_blank";
-                //         a.textContent = externalLink.text;
-                //         linkContainer.appendChild(a);
-                //         content.appendChild(linkContainer);
-                //     }
-                // }
-
+            
                 information.appendChild(info_title);
                 information.appendChild(info_content);
                 info_content.appendChild(content);
@@ -122,6 +123,8 @@ event.addEventListener("click", function(e){
         .catch((err) => {
             console.error('Failed to Load the json.', err);
         });  
+
+        event.removeEventListener("click", handler)
 });
 
 
