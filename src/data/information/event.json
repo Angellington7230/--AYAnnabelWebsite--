@@ -173,6 +173,11 @@
       "subtitle": null,
       "description": [
         {
+          "text": null,
+          "image": null,
+          "link": null
+        },
+        {
           "text": "2016年10月30日（日）",
           "image": null,
           "link": null
@@ -224,7 +229,7 @@
         },
         {
           "text": " 「warehouse 160814」　500円",
-          "image": "../assets/images/warehouse160814.jpg",
+          "image": "../assets/images/albums/warehouse160814.jpg",
           "link": "https://annabel.jp/wh160814.html"
         },
         {
@@ -275,6 +280,11 @@
       "subtitle": null,
       "description": [
         {
+          "text": null,
+          "image": null,
+          "link": null
+        },
+        {
           "text": " 2016年8月21日（日）",
           "image": null,
           "link": null
@@ -306,7 +316,7 @@
         },
         {
           "text": "  「warehouse 160814」　500円",
-          "image": "../assets/images/warehouse160814.jpg",
+          "image": "../assets/images/albums/warehouse160814.jpg",
           "link": "https://annabel.jp/wh160814.html"
         },
         {
@@ -362,6 +372,11 @@
       "subtitle": null,
       "description": [
         {
+          "text": null,
+          "image": null,
+          "link": null
+        },
+        {
           "text": " 2016年8月14日（日）",
           "image": null,
           "link": null
@@ -383,7 +398,7 @@
         },
         {
           "text": "「warehouse 160814」　500円",
-          "image": "../assets/images/warehouse160814.jpg",
+          "image": "../assets/images/albums/warehouse160814.jpg",
           "link": "https://annabel.jp/wh160814.html"
         },
         {
@@ -408,6 +423,11 @@
       "info_title": "M3 2016春",
       "subtitle": null,
       "description": [
+        {
+          "text": null,
+          "image": null,
+          "link": null
+        },
         {
           "text": "2016年4月24日（日）",
           "image": null,

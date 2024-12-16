@@ -224,8 +224,15 @@ body {
                                 padding: 20px;
                                 height: 100%;
                                 .content {
+                                    background-color: bisque;
                                     line-height: 1;
                                     font-family: $inter;
+                                    .info-link {
+                                        width: 100%;
+                                        background-color: aqua;
+                                    }
+
+                                    
                                 }
                             }
                             .col2 {
@@ -307,22 +314,54 @@ body {
                                         margin: 0;
                                     }
                                 }
+                                .info-link {
+                                    color: $font-color2;
+                                    text-decoration: none;
+                                    // background-color: #CCCCCC;
+                                    a {
+                                        text-decoration: none;
+                                        color: $font-color;
+                                    }
+                                    a:hover {
+                                        text-decoration: underline;
+                                        color: $font-color2;
+                                    }
+                                }
+                               
                                 .info-album {
+                               
                                     display: flex;
                                     flex-direction: row;
-                                    // background-color: aqua;
-                                    gap: 21px;
-                                    img {
-                                        width: 20%;
-                                        height: 20%;
-                                        border-radius: 4px;
-                                        border: 1px solid rgba(0, 0, 0, 0.445);
-                                        transition: 0.25s ease-in-out;
+                                    gap: 20px;
+                                    a {
+                                        width: auto;
+                                        height: auto;
+                                        img {
+                                            width: 5em;
+                                            height: 5em;
+                                            border-radius: 4px;
+                                            border: 1px solid rgba(0, 0, 0, 0.445);
+                                        }
+                                        img:hover {
+                                            opacity: 50%;
+                                            cursor: pointer;
+                                        }
                                     }
-                                    img:hover {
-                                        opacity: 50%;
-                                        cursor: pointer;
-                                    }
+                                    // display: flex;
+                                    // flex-direction: row;
+                                    // // background-color: aqua;
+                                    // gap: 21px;
+                                    // img {
+                                    //     width: 20%;
+                                    //     height: 20%;
+                                    //     border-radius: 4px;
+                                    //     border: 1px solid rgba(0, 0, 0, 0.445);
+                                    //     transition: 0.25s ease-in-out;
+                                    // }
+                                    // img:hover {
+                                    //     opacity: 50%;
+                                    //     cursor: pointer;
+                                    // }
                                 }
                             }                           
                         }

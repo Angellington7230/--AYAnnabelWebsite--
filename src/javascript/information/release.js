@@ -7,10 +7,10 @@
 
 
 
-event.addEventListener("click", function handler(e){
-    const event_data = "../data/information/event.json";
+release.addEventListener("click", function handler(e){
+    const event_data = "../data/information/release.json";
 
-    // alert("Clicando em live");
+    alert("Clicando em em release");
 
     const json_live_data = fetch(event_data)
         .then((response) => {
@@ -67,6 +67,16 @@ event.addEventListener("click", function handler(e){
                         content.appendChild(breakline);
                     }
 
+                    if (description.text && description.link && description.image == null){
+                        let link = document.createElement("p");
+                        link.innerHTML = `
+                        <div class="info-link">
+                         <p><a href="${description.link}" target="_blank">${description.text}</a></p>
+                        </div>
+                            `
+                        content.appendChild(link)
+                    }
+
 
                     if (description.text && description.image && description.link){
                         let paragraph = document.createElement("div");
@@ -80,27 +90,40 @@ event.addEventListener("click", function handler(e){
                         `
                         content.appendChild(paragraph)
                     }
+
+                    if (!description.text && !description.link && description.image){
+                        let paragraph = document.createElement("div");
+                        paragraph.innerHTML = 
+                        `
+                        <div class="info-album">
+
+                            <a href="#" target="_blank" ><img src="${description.image}" alt="${description.text}"></a>
+                        </div>
+                        `
+                        content.appendChild(paragraph)
+                    }
                     
                     
-                    else if (description.image === null){
+                    else if (description.image === null && description.link == null){
                         let paragraph = document.createElement("p");
                         paragraph.textContent = description.text;
                         content.appendChild(paragraph);
                     } else {
-                        let info_album = document.createElement("div");
-                        info_album.classList.add("info-album");
+                        // let info_album = document.createElement("div");
+                        // info_album.classList.add("info-album");
                 
-                        let img = document.createElement("img");
-                        img.src = description.image;
-                        img.alt = description.text;  // A descrição da imagem pode ser o texto
+                        // let img = document.createElement("img");
+                        // img.src = description.image;
+                        // img.alt = description.text;  // A descrição da imagem pode ser o texto
                 
-                        let paragraph = document.createElement("p");
-                        paragraph.textContent = description.text;
+                        // let paragraph = document.createElement("p");
+                        // paragraph.textContent = description.text;
                 
-                        info_album.appendChild(img);
-                        info_album.appendChild(paragraph);
+                        // info_album.appendChild(img);
+                        // info_album.appendChild(paragraph);
                 
-                        content.appendChild(info_album); 
+                        // content.appendChild(info_album); 
+                        console.log("")
                     }
                 });
             

@@ -68,7 +68,7 @@ live.addEventListener("click", function handler(e){
             console.error('Failed to Load the json.', err);
         });  
 
-        live.removeEventListener("click", handler)
+        // live.removeEventListener("click", handler)
 });
 
 
