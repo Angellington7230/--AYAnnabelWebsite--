@@ -10,7 +10,7 @@
 release.addEventListener("click", function handler(e){
     const event_data = "../data/information/release.json";
 
-    alert("Clicando em em release");
+    // alert("Clicando em em release");
 
     const json_live_data = fetch(event_data)
         .then((response) => {
