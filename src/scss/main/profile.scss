@@ -411,7 +411,7 @@ body {
 
         }
         #top-header {
-            height: 40vh;
+            height: 30vh;
             // background-color: aqua;
             background-image: url("../../../assets/images/background1.png");
             background-attachment: fixed;
@@ -450,6 +450,20 @@ body {
                     width: 100%;
                     // background-color: blue;
                 }
+            }
+            
+        }
+        #profile {
+            background-color: aqua;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            #image {
+                background-color: aquamarine;
+                display: flex;
+                justify-content: center;
+                align-items: start;
             }
             
         }

@@ -314,7 +314,7 @@ body {
     flex-wrap: wrap;
   }
   body #top-header {
-    height: 40vh;
+    height: 30vh;
     background-image: url("../../../assets/images/background1.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -343,6 +343,19 @@ body {
     flex-direction: center;
     height: 5vh;
     width: 100%;
+  }
+  body #profile {
+    background-color: aqua;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  body #profile #image {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: start;
   }
 }
 
