@@ -21,7 +21,7 @@ media.addEventListener("click", function handler(e){
         })
         .then((response) => {
             const posts = response.posts;
-            console.log(posts);
+            // console.log(posts);
             const background2 = document.getElementById("background2");
             background2.innerHTML =  ''
 

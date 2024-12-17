@@ -422,7 +422,7 @@ function displayPosts(posts) {
                     paragraph.textContent = description.text;
                     content.appendChild(paragraph);
                 } else {
-                    console.log(""); // Apenas para depuração
+                 // Apenas para depuração
                 }
             });
         
@@ -446,7 +446,7 @@ function displayPosts(posts) {
         
 
         else {
-            console.log("")
+            
         }
     });
 }

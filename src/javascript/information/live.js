@@ -10,7 +10,7 @@ const media = document.getElementById("Media");
 live.addEventListener("click", function handler(e){
     const live_data = "../data/information/live.json";
 
-    console.log("Clicando em live");
+    // console.log("Clicando em live");
 
     const json_live_data = fetch(live_data)
         .then((response) => {
@@ -21,7 +21,7 @@ live.addEventListener("click", function handler(e){
         })
         .then((response) => {
             const posts = response.posts;
-            console.log(posts);
+            // console.log(posts);
 
             const background2 = document.getElementById("background2");
             background2.innerHTML = ''
