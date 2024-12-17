@@ -28,8 +28,7 @@ release.addEventListener("click", function handler(e){
             posts.forEach((post) => {
 
 
-             
-
+        
 
                
                 let article = document.createElement("article");
@@ -37,7 +36,7 @@ release.addEventListener("click", function handler(e){
 
                 let date_pub = document.createElement("p");
                 date_pub.classList.add("date-pub");
-                date_pub.textContent = post.date; // Usar textContent para definir o texto
+                date_pub.textContent = post.date; 
 
                 let card_default = document.createElement("div");
                 card_default.classList.add("card-default");
@@ -109,20 +108,6 @@ release.addEventListener("click", function handler(e){
                         paragraph.textContent = description.text;
                         content.appendChild(paragraph);
                     } else {
-                        // let info_album = document.createElement("div");
-                        // info_album.classList.add("info-album");
-                
-                        // let img = document.createElement("img");
-                        // img.src = description.image;
-                        // img.alt = description.text;  // A descrição da imagem pode ser o texto
-                
-                        // let paragraph = document.createElement("p");
-                        // paragraph.textContent = description.text;
-                
-                        // info_album.appendChild(img);
-                        // info_album.appendChild(paragraph);
-                
-                        // content.appendChild(info_album); 
                         console.log("")
                     }
                 });
@@ -133,7 +118,6 @@ release.addEventListener("click", function handler(e){
 
                 card_default.appendChild(back_default);
                 back_default.appendChild(information)
-                // card_default.appendChild(informationz);
                 
                 article.appendChild(date_pub);
                 article.appendChild(card_default);

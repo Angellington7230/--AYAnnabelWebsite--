@@ -34,13 +34,15 @@ async function fetchAndDisplayData() {
         const allPostsFlattened = allPosts.flat();
 
         // Ordena os posts pela data
-        allPostsFlattened.sort((a, b) => b.date - a.date);  // Ordenação crescente
+        allPostsFlattened.sort((a, b) => b.date - a.date);  // Ordenação decrescente
 
         return allPostsFlattened;  // Retorna os posts ordenados
     } catch (err) {
         console.error('Erro ao buscar e exibir dados:', err);
     }
 }
+
+
 
 // Função para exibir os posts no HTML
 function displayPosts(posts) {
@@ -56,10 +58,16 @@ function displayPosts(posts) {
         const datePub = document.createElement("p");
         datePub.classList.add("date-pub");
         if (post.date instanceof Date) {
-            datePub.textContent = post.date.toLocaleDateString();  // Exibe a data no formato local
+            // Formatar a data para garantir dois dígitos no mês e dia
+            datePub.textContent = post.date.toLocaleDateString('ja-JP', {
+                year: 'numeric',
+                month: '2-digit', 
+                day: '2-digit'     
+            }); 
         } else {
             datePub.textContent = "Data inválida";  // Caso o post não tenha uma data válida
         }
+        
 
         // Adiciona a data ao artigo
         article.appendChild(datePub);
@@ -72,7 +80,11 @@ function displayPosts(posts) {
             // Adiciona a data de publicação do evento
             let date_pub = document.createElement("p");
             date_pub.classList.add("date-pub");
-            date_pub.textContent = post.date.toLocaleDateString(); // Exibe a data do evento
+            date_pub.textContent = post.date.toLocaleDateString('ja-JP', {
+                year: 'numeric',
+                month: '2-digit', 
+                day: '2-digit'     
+            }); 
 
             // Criação de elementos do conteúdo do evento
             let card_default = document.createElement("div");
@@ -246,9 +258,14 @@ function displayPosts(posts) {
             const datePub = document.createElement("p");
             datePub.classList.add("date-pub");
             if (post.date instanceof Date) {
-                datePub.textContent = post.date.toLocaleDateString();  // Exibe a data no formato local
+                // Formatar a data para garantir dois dígitos no mês e dia
+                datePub.textContent = post.date.toLocaleDateString('ja-JP', {
+                    year: 'numeric',
+                    month: '2-digit', 
+                    day: '2-digit'     
+                }); 
             } else {
-                datePub.textContent = "Data inválida";  // Caso o post não tenha uma data válida
+                datePub.textContent = "Data inválida"; 
             }
         
             // Criação do card de media
@@ -323,20 +340,20 @@ function displayPosts(posts) {
             // Adiciona o artigo ao contêiner principal
             background2.appendChild(mediaArticle);
         }
-        if (post.article === "release") {
-            // Criação do artigo para "release"
+        if (post.article === 'release') {
             let article = document.createElement("article");
-            article.classList.add("release");
+            article.classList.add("release"); // Alterando para 'release' em vez de 'event'
         
-            // Criação do elemento de data de publicação
+            // Adiciona a data de publicação do release
             let date_pub = document.createElement("p");
             date_pub.classList.add("date-pub");
+            date_pub.textContent = post.date.toLocaleDateString('ja-JP', {
+                year: 'numeric',
+                month: '2-digit', 
+                day: '2-digit'     
+            });   // Utilizando o post.date diretamente
         
-            // Formatação da data para um formato amigável (DD/MM/YYYY)
-            const formattedDate = post.date instanceof Date ? post.date.toLocaleDateString("pt-BR") : "Data inválida"; // Formato pt-BR
-            date_pub.textContent = formattedDate;
-        
-            // Criação do conteúdo do release
+            // Criação de elementos do conteúdo do release
             let card_default = document.createElement("div");
             card_default.classList.add("card-default");
         
@@ -348,7 +365,7 @@ function displayPosts(posts) {
         
             let info_title = document.createElement("h2");
             info_title.classList.add("info-title");
-            info_title.textContent = post.info_title;  // Título do release
+            info_title.textContent = post.info_title;
         
             let info_content = document.createElement("div");
             info_content.classList.add("info-content");
@@ -356,46 +373,60 @@ function displayPosts(posts) {
             let content = document.createElement("div");
             content.classList.add("content");
         
-            // Loop pelas descrições para formatar texto, links e imagens
+            // Processa as descrições no release
             post.description.forEach((description) => {
-                if (!description.text && !description.link && !description.image) {
-                    // Caso não haja texto, link ou imagem
-                    let paragraph = document.createElement("p");
-                    paragraph.textContent = "Sem descrição disponível.";
-                    content.appendChild(paragraph);
-                } else if (description.text && !description.link && !description.image) {
-                    // Caso tenha apenas texto
-                    let paragraph = document.createElement("p");
-                    paragraph.textContent = description.text;
-                    content.appendChild(paragraph);
-                } else if (description.text && description.link && !description.image) {
-                    // Caso tenha texto e link, mas sem imagem
+                // Se o texto for nulo ou vazio, adiciona um quebra de linha
+                if (description.text == null || description.text == "") {
+                    let breakline = document.createElement("p");
+                    breakline.innerHTML = "<br>";
+                    content.appendChild(breakline);
+                }
+        
+                // Caso tenha texto e link, mas sem imagem
+                if (description.text && description.link && description.image == null) {
                     let link = document.createElement("p");
-                    link.innerHTML = `<a href="${description.link}" target="_blank">${description.text}</a>`;
+                    link.innerHTML = `
+                        <div class="info-link">
+                            <p><a href="${description.link}" target="_blank">${description.text}</a></p>
+                        </div>
+                    `;
                     content.appendChild(link);
-                } else if (description.text && description.image && !description.link) {
-                    // Caso tenha texto e imagem, mas sem link
+                }
+        
+                // Caso tenha texto, imagem e link
+                if (description.text && description.image && description.link) {
                     let paragraph = document.createElement("div");
                     paragraph.innerHTML = `
                         <div class="info-album">
-                            <img src="${description.image}" alt="${description.text}">
+                            <a href="${description.link}" target="_blank"><img src="${description.image}" alt="${description.text}"></a>
                             <p>${description.text}</p>
                         </div>
                     `;
                     content.appendChild(paragraph);
-                } else if (!description.text && description.image && description.link) {
-                    // Caso tenha imagem e link, mas sem texto
+                }
+        
+                // Caso tenha apenas imagem, sem texto nem link
+                if (!description.text && !description.link && description.image) {
                     let paragraph = document.createElement("div");
                     paragraph.innerHTML = `
                         <div class="info-album">
-                            <a href="${description.link}" target="_blank"><img src="${description.image}" alt="Imagem do link"></a>
+                            <a href="#" target="_blank"><img src="${description.image}" alt="${description.text}"></a>
                         </div>
                     `;
                     content.appendChild(paragraph);
                 }
+        
+                // Caso tenha apenas texto, sem imagem nem link
+                else if (description.image === null && description.link == null) {
+                    let paragraph = document.createElement("p");
+                    paragraph.textContent = description.text;
+                    content.appendChild(paragraph);
+                } else {
+                    console.log(""); // Apenas para depuração
+                }
             });
         
-            // Adiciona o título, conteúdo e informações ao "release"
+            // Adiciona o conteúdo ao artigo de release
             information.appendChild(info_title);
             information.appendChild(info_content);
             info_content.appendChild(content);
@@ -403,13 +434,14 @@ function displayPosts(posts) {
             card_default.appendChild(back_default);
             back_default.appendChild(information);
         
-            // Adiciona a data de publicação e o conteúdo ao artigo
+            // Adiciona o artigo de release no contêiner
             article.appendChild(date_pub);
             article.appendChild(card_default);
         
-            // Adiciona o artigo ao container
+            // Adiciona o artigo de release no fundo (background2)
             background2.appendChild(article);
         }
+        
         
         
 
