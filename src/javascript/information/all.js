@@ -454,18 +454,18 @@ function displayPosts(posts) {
 // Adicionando o evento ao elemento 'all'
 // const all = document.getElementById("All");  // Garantir que 'all' é o ID de um elemento válido
 
-// if (all) {
-//     all.addEventListener("click", async function (e) {
-//         const article = document.getElementsByTagName("article");
+if (all) {
+    all.addEventListener("click", async function (e) {
+        const article = document.getElementsByTagName("article");
         
-//         // console.log("Clicando em all");  // Apenas para debugar e verificar se o clique está funcionando
+        // console.log("Clicando em all");  // Apenas para debugar e verificar se o clique está funcionando
 
-//         const posts = await fetchAndDisplayData();
-//         displayPosts(posts);
-//     });
-// } else {
-//     console.error('Elemento "all" não encontrado.');
-// }
+        const posts = await fetchAndDisplayData();
+        displayPosts(posts);
+    });
+} else {
+    console.error('Elemento "all" não encontrado.');
+}
 
 if(all){
     window.onload = async function LoadAll(){

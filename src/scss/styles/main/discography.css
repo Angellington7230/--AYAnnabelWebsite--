@@ -15,7 +15,6 @@ body {
   body #top-header {
     height: 20vh;
     background-image: url("../../../assets/images/background1.png");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -53,6 +52,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 20vh;
   }
   body #discography .container {
     --columns: 2;
@@ -127,6 +127,7 @@ body {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 10vh;
   }
   body #discography .container {
     --columns: 4;

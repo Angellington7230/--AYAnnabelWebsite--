@@ -370,7 +370,7 @@ body .article-restored {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: auto;
   }
   body #background2 article .card-media .wallpaper .information .col1 {
     background-color: #fff;
@@ -411,15 +411,15 @@ body .article-restored {
     margin: 0;
     background-color: black;
     width: auto;
-    height: auto;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   body #background2 article .card-media .wallpaper .information .col2 .media iframe {
-    width: 70vw;
-    height: auto;
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
   }
   body #background2 article .card-media .wallpaper .information h2 {
     margin: 0;
@@ -487,7 +487,7 @@ body .article-restored {
   }
   body #background2 {
     background-image: url("../../../assets/images/vanilla.png");
-    padding: 5vw 15vw;
+    padding: 5vw 10vw;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -529,6 +529,8 @@ body .article-restored {
     margin: 20px;
     padding: 20px;
     height: 100%;
+    max-width: 800px;
+    min-width: 200px;
   }
   body #background2 article .card-media .wallpaper .information .col1 .content {
     line-height: 1;
@@ -540,7 +542,8 @@ body .article-restored {
   }
   body #background2 article .card-media .wallpaper .information .col2 {
     background-color: #fff;
-    padding: 10px;
+    padding: 3px;
+    border-radius: 4px;
     margin: 20px;
     margin-right: 5%;
     height: 100%;
