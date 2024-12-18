@@ -1,0 +1,236 @@
+/* Áa !*/ 
+// Media Queries
+$desktop: 774px;
+$mobile: 775px;
+
+// Pattern Colors
+$pk-color: #fff;
+$sk-color: #d3d3d3;
+$tk-color: #EFEFEF;
+
+
+
+// Font Color
+$font-color: #555555;
+$font-color2: #757575;
+$font-color-hover: #CCCCCC;
+
+// Inter Font - Josefin Sans
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// Fonts fo use
+$inter: "Inter";
+$josefin-sans: "Josefin Sans";
+
+
+body {
+    // Reset
+    padding: 0;
+    margin: 0;
+    line-height: none;
+ 
+    @media(max-width: $mobile){
+        section {
+            padding-top: 7vh;
+            flex-wrap: wrap;
+
+        }
+        #top-header {
+            height: 20vh;
+            // background-color: aqua;
+            background-image: url("../../../assets/images/background1.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            
+            div {
+                // background-color: aquamarine;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        
+        
+                width: 100vw;
+        
+                h1 {
+                    // background-color: blanchedalmond;
+        
+                    font-size: 34px;
+                    font-family: $inter;
+                    font-weight: normal;
+                    margin: -10px;
+                }
+                #ornament {
+                    display: flex;
+                    flex-direction: center;
+                    height: 5vh;
+                    width: 80%;
+                    // background-color: blue;
+                    img {
+                        height: 70%;
+                    }
+                    margin-bottom: 12px;
+                }
+            }
+            
+        }
+        #profile {
+            // background-color: aqua;
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            
+            
+            #image {
+                // background-color: aquamarine;
+                margin-top: 5vh;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                img {
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+            #information {
+                width: 80vw;
+                height: 50vh;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+                h1 {
+                    color: $font-color;
+                    font-family: $inter;
+                    font-weight: 500;
+                    text-decoration: none;
+                    b {
+                        font-weight: bold;
+                    }
+                }
+                #field {
+                    color: $font-color;
+                    p {
+                        font-size: 14px;
+                        margin: 0;
+                        line-height: 1.5;
+                    }
+                    a {
+                        color: $font-color;
+                    }
+                    a:hover {
+                        color: $font-color-hover;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+
+    // Desktop Style
+    @media (min-width: $desktop) {
+        section {
+            padding-top: 7vh;
+            flex-wrap: wrap;
+
+        }
+        #top-header {
+            height: 20vh;
+            // background-color: aqua;
+            background-image: url("../../../assets/images/background1.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            
+            div {
+                // background-color: aquamarine;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        
+        
+                width: 70vw;
+        
+                h1 {
+                    // background-color: blanchedalmond;
+        
+                    font-size: 55px;
+                    font-family: $inter;
+                    font-weight: normal;
+                    margin: -10px;
+                }
+                #ornament {
+                    display: flex;
+                    flex-direction: center;
+                    height: 5vh;
+                    width: 100%;
+                    // background-color: blue;
+                }
+            }
+            
+        }
+        #discography {
+            width: 50%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 5px;
+            padding: 20px;
+            .image {
+                margin: 10px;
+                width: 200px;
+                overflow: hidden;
+                height: fit-content;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;
+                a {
+                    display: block;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    object-fit: cover;
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+            .image:hover {
+                transform: scale(1.05);
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        
+            
+            
+        
+    }
+}
+
