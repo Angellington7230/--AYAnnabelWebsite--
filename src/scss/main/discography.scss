@@ -84,59 +84,41 @@ body {
             }
             
         }
-        #profile {
-            // background-color: aqua;
-            width: 100vw;
-            height: auto;
+        #discography {
+            
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            margin: 0;
-            padding: 0;
-            
-            
-            #image {
-                // background-color: aquamarine;
-                margin-top: 5vh;
-                align-items: center;
-                justify-content: center;
-                display: flex;
-                img {
-                    width: 80%;
-                    height: 80%;
-                }
-            }
-            #information {
-                width: 80vw;
-                height: 50vh;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-                flex-direction: column;
-                h1 {
-                    color: $font-color;
-                    font-family: $inter;
-                    font-weight: 500;
-                    text-decoration: none;
-                    b {
-                        font-weight: bold;
-                    }
-                }
-                #field {
-                    color: $font-color;
-                    p {
-                        font-size: 14px;
-                        margin: 0;
-                        line-height: 1.5;
-                    }
+            justify-content: center;
+            flex-wrap: wrap;
+          
+            .container {
+                --columns: 2;
+                max-width: 30rem;
+                margin: 0 auto;
+                display: row;
+                columns: var(--columns);
+                .image {
+                    margin: 12px;
+                    overflow: hidden;
+                    height: fit-content;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.9s ease-in-out;
+                    transition: opacity 0.4s ease-in-out;
                     a {
-                        color: $font-color;
+                        display: block;
                     }
-                    a:hover {
-                        color: $font-color-hover;
-                        text-decoration: underline;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                        transition: transform 0.3s ease-in-out;
                     }
+                }
+                .image:hover {
+                    opacity: 0.5;
                 }
             }
             
@@ -195,41 +177,49 @@ body {
             
         }
         #discography {
-            width: 50%;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-gap: 5px;
-            padding: 20px;
-            .image {
-                margin: 10px;
-                width: 200px;
-                overflow: hidden;
-                height: fit-content;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease-in-out;
-                a {
-                    display: block;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+          
+            .container {
+                --columns: 4;
+                max-width: 60rem;
+                margin: 0 auto;
+                display: row;
+                flex-wrap: wrap;
+                columns: var(--columns);
+                .image {
+                    margin: 12px;
+                    overflow: hidden;
+                    height: fit-content;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.9s ease-in-out;
+                    transition: opacity 0.4s ease-in-out;
+                    flex: 1 0 22%;
+                    a {
+                        display: block;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                        transition: transform 0.3s ease-in-out;
+                    }
                 }
-                img {
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                    object-fit: cover;
-                    transition: transform 0.3s ease-in-out;
+                .image:hover {
+                    opacity: 0.5;
                 }
             }
-            .image:hover {
-                transform: scale(1.05);
-                img {
-                    transform: scale(1.1);
-                }
-            }
+            
         }
         
             
-            
+  
         
     }
 }

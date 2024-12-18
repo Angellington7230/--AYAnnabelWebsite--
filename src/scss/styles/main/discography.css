@@ -47,57 +47,41 @@ body {
   body #top-header div #ornament img {
     height: 70%;
   }
-  body #profile {
-    width: 100vw;
-    height: auto;
+  body #discography {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  body #profile #image {
-    margin-top: 5vh;
     align-items: center;
     justify-content: center;
-    display: flex;
+    flex-wrap: wrap;
   }
-  body #profile #image img {
-    width: 80%;
-    height: 80%;
+  body #discography .container {
+    --columns: 2;
+    max-width: 30rem;
+    margin: 0 auto;
+    display: row;
+    columns: var(--columns);
   }
-  body #profile #information {
-    width: 80vw;
-    height: 50vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
+  body #discography .container .image {
+    margin: 12px;
+    overflow: hidden;
+    height: fit-content;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.9s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
   }
-  body #profile #information h1 {
-    color: #555555;
-    font-family: "Inter";
-    font-weight: 500;
-    text-decoration: none;
+  body #discography .container .image a {
+    display: block;
   }
-  body #profile #information h1 b {
-    font-weight: bold;
+  body #discography .container .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
   }
-  body #profile #information #field {
-    color: #555555;
-  }
-  body #profile #information #field p {
-    font-size: 14px;
-    margin: 0;
-    line-height: 1.5;
-  }
-  body #profile #information #field a {
-    color: #555555;
-  }
-  body #profile #information #field a:hover {
-    color: #CCCCCC;
-    text-decoration: underline;
+  body #discography .container .image:hover {
+    opacity: 0.5;
   }
 }
 @media (min-width: 774px) {
@@ -137,37 +121,43 @@ body {
     width: 100%;
   }
   body #discography {
-    width: 50%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 5px;
-    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  body #discography .image {
-    margin: 10px;
-    width: 200px;
+  body #discography .container {
+    --columns: 4;
+    max-width: 60rem;
+    margin: 0 auto;
+    display: row;
+    flex-wrap: wrap;
+    columns: var(--columns);
+  }
+  body #discography .container .image {
+    margin: 12px;
     overflow: hidden;
     height: fit-content;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.9s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    flex: 1 0 22%;
   }
-  body #discography .image a {
+  body #discography .container .image a {
     display: block;
   }
-  body #discography .image img {
+  body #discography .container .image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
-  body #discography .image:hover {
-    transform: scale(1.05);
-  }
-  body #discography .image:hover img {
-    transform: scale(1.1);
+  body #discography .container .image:hover {
+    opacity: 0.5;
   }
 }
 
