@@ -30,6 +30,23 @@ body {
     padding: 0;
     margin: 0;
     line-height: none;
+
+    article {
+        transition: transform 0.5s ease, opacity 0.5s ease; 
+        transform-origin: top; 
+        opacity: 1; 
+    }
+    
+    
+    .article-shrunk {
+        opacity: 0; 
+    }
+    
+    .article-restored {
+        transform: scaleY(1);    
+        opacity: 1;              
+    }
+    
  
     @media(max-width: $mobile){
         section {
@@ -331,6 +348,118 @@ body {
 
                 }
                 
+            }
+            .release {
+                .card-default {
+                    background-color: $pk-color;
+                    font-family: $inter;
+                    // width: 100%;
+                    height: auto;
+                    // padding: 10px 2px 10px 2px;
+                    padding: 12px;
+                    margin: 0;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .back-default {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 92%;
+                        width: 97.5%;
+                        .information {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: start;
+                            flex-direction: column;
+                            margin: 0;
+                        
+                            .info-title {
+                                margin: 0;
+                                line-height: 1;
+                                width: 90%;
+                                font-weight: 700;
+                                font-size: 22px;
+                                font-size: 18px;
+                                font-size: 18px;
+                                padding: 8px 8px 0px 0px;
+                            }
+                            .info-content {
+                                margin: 0;
+                                line-height: 1;
+                                width: 90%;
+                                font-weight: 700;
+                                font-size: 22px;
+                                .content {
+                                    display: flex;
+                                    margin: 0;
+                                    flex-direction: column;
+                                    text-align: left;
+                                    line-height: 2;
+                                    font-size: 14px;
+                                    color: $font-color2;
+                                    font-weight: 500;
+                                    p {
+                                        margin: 0;
+                                        // padding: 8px;
+                                    }
+                                    font-size: 14px;
+                                }
+                                .info-link {
+                                    color: $font-color2;
+                                    text-decoration: none;
+                                    // background-color: #CCCCCC;
+                                    a {
+                                        text-decoration: none;
+                                        color: $font-color;
+                                    }
+                                    a:hover {
+                                        text-decoration: underline;
+                                        color: $font-color2;
+                                    }
+                                }
+                               
+                                .info-album {
+                               
+                                    display: flex;
+                                    flex-direction: row;
+                                    gap: 20px;
+                                    a {
+                                        width: auto;
+                                        height: auto;
+                                        img {
+                                            width: 5em;
+                                            height: 5em;
+                                            border-radius: 4px;
+                                            border: 1px solid rgba(0, 0, 0, 0.445);
+                                        }
+                                        img:hover {
+                                            opacity: 50%;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                    // display: flex;
+                                    // flex-direction: row;
+                                    // // background-color: aqua;
+                                    // gap: 21px;
+                                    // img {
+                                    //     width: 20%;
+                                    //     height: 20%;
+                                    //     border-radius: 4px;
+                                    //     border: 1px solid rgba(0, 0, 0, 0.445);
+                                    //     transition: 0.25s ease-in-out;
+                                    // }
+                                    // img:hover {
+                                    //     opacity: 50%;
+                                    //     cursor: pointer;
+                                    // }
+                                }
+                            }                           
+                        }
+                        
+                    }
+
+                }
             }
         
             article

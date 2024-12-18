@@ -8,6 +8,8 @@
 
 
 event.addEventListener("click", function handler(e){
+
+    
     const event_data = "../data/information/event.json";
 
     // alert("Clicando em live");

@@ -454,23 +454,25 @@ function displayPosts(posts) {
 // Adicionando o evento ao elemento 'all'
 // const all = document.getElementById("All");  // Garantir que 'all' é o ID de um elemento válido
 
-if (all) {
-    all.addEventListener("click", async function (e) {
-        // console.log("Clicando em all");  // Apenas para debugar e verificar se o clique está funcionando
+// if (all) {
+//     all.addEventListener("click", async function (e) {
+//         const article = document.getElementsByTagName("article");
+        
+//         // console.log("Clicando em all");  // Apenas para debugar e verificar se o clique está funcionando
 
-        const posts = await fetchAndDisplayData();
-        displayPosts(posts);
-    });
-} else {
-    console.error('Elemento "all" não encontrado.');
-}
-
-// if(all){
-//     window.onload = async function LoadAll(){
 //         const posts = await fetchAndDisplayData();
 //         displayPosts(posts);
-//     }
+//     });
+// } else {
+//     console.error('Elemento "all" não encontrado.');
 // }
+
+if(all){
+    window.onload = async function LoadAll(){
+        const posts = await fetchAndDisplayData();
+        displayPosts(posts);
+    }
+}
 
 /* I am sorry so much... This one is so complex to do only! I have to thanks ChatGPT for fix my code
 Now, fetch datas in async is very complex for me now... This logic is by ChatGPT... The rest is my.

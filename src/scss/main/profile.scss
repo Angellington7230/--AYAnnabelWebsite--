@@ -60,12 +60,12 @@ body {
                 justify-content: center;
         
         
-                width: 70vw;
+                width: 100vw;
         
                 h1 {
                     // background-color: blanchedalmond;
         
-                    font-size: 55px;
+                    font-size: 34px;
                     font-family: $inter;
                     font-weight: normal;
                     margin: -10px;
@@ -74,8 +74,12 @@ body {
                     display: flex;
                     flex-direction: center;
                     height: 5vh;
-                    width: 100%;
+                    width: 80%;
                     // background-color: blue;
+                    img {
+                        height: 70%;
+                    }
+                    margin-bottom: 12px;
                 }
             }
             
@@ -104,7 +108,7 @@ body {
                 }
             }
             #information {
-                width: 90vw;
+                width: 80vw;
                 height: 50vh;
                 display: flex;
                 justify-content: start;

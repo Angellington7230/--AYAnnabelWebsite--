@@ -7,6 +7,18 @@ body {
   margin: 0;
   line-height: none;
 }
+body article {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform-origin: top;
+  opacity: 1;
+}
+body .article-shrunk {
+  opacity: 0;
+}
+body .article-restored {
+  transform: scaleY(1);
+  opacity: 1;
+}
 @media (max-width: 775px) {
   body section {
     padding-top: 7vh;
@@ -244,6 +256,92 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.445);
   }
   body #background2 .event .card-default .back-default .information .info-content .info-album a img:hover {
+    opacity: 50%;
+    cursor: pointer;
+  }
+  body #background2 .release .card-default {
+    background-color: #fff;
+    font-family: "Inter";
+    height: auto;
+    padding: 12px;
+    margin: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body #background2 .release .card-default .back-default {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 92%;
+    width: 97.5%;
+  }
+  body #background2 .release .card-default .back-default .information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  body #background2 .release .card-default .back-default .information .info-title {
+    margin: 0;
+    line-height: 1;
+    width: 90%;
+    font-weight: 700;
+    font-size: 22px;
+    font-size: 18px;
+    font-size: 18px;
+    padding: 8px 8px 0px 0px;
+  }
+  body #background2 .release .card-default .back-default .information .info-content {
+    margin: 0;
+    line-height: 1;
+    width: 90%;
+    font-weight: 700;
+    font-size: 22px;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .content {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    text-align: left;
+    line-height: 2;
+    font-size: 14px;
+    color: #757575;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .content p {
+    margin: 0;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-link {
+    color: #757575;
+    text-decoration: none;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-link a {
+    text-decoration: none;
+    color: #555555;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-link a:hover {
+    text-decoration: underline;
+    color: #757575;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-album {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-album a {
+    width: auto;
+    height: auto;
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-album a img {
+    width: 5em;
+    height: 5em;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+  }
+  body #background2 .release .card-default .back-default .information .info-content .info-album a img:hover {
     opacity: 50%;
     cursor: pointer;
   }
