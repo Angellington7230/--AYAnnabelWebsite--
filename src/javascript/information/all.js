@@ -465,12 +465,12 @@ if (all) {
     console.error('Elemento "all" não encontrado.');
 }
 
-if(all){
-    window.onload = async function LoadAll(){
-        const posts = await fetchAndDisplayData();
-        displayPosts(posts);
-    }
-}
+// if(all){
+//     window.onload = async function LoadAll(){
+//         const posts = await fetchAndDisplayData();
+//         displayPosts(posts);
+//     }
+// }
 
 /* I am sorry so much... This one is so complex to do only! I have to thanks ChatGPT for fix my code
 Now, fetch datas in async is very complex for me now... This logic is by ChatGPT... The rest is my.
