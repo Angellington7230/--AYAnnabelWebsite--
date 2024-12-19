@@ -35,36 +35,24 @@ body {
         section {
             padding-top: 7vh;
             flex-wrap: wrap;
-
         }
         #top-header {
             height: 20vh;
-            // background-color: aqua;
             background-image: url("../../../assets/images/background1.png");
-            background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-        
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-        
-            
+            align-items: center;     
             div {
-                // background-color: aquamarine;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-        
-        
                 width: 100vw;
-        
                 h1 {
-                    // background-color: blanchedalmond;
-        
                     font-size: 34px;
                     font-family: $inter;
                     font-weight: normal;
@@ -82,10 +70,8 @@ body {
                     margin-bottom: 12px;
                 }
             }
-            
         }
         #profile {
-            // background-color: aqua;
             width: 100vw;
             height: auto;
             display: flex;
@@ -94,10 +80,7 @@ body {
             align-items: center;
             margin: 0;
             padding: 0;
-            
-            
             #image {
-                // background-color: aquamarine;
                 margin-top: 5vh;
                 align-items: center;
                 justify-content: center;
@@ -132,16 +115,14 @@ body {
                     }
                     a {
                         color: $font-color;
-                    }
-                    a:hover {
-                        color: $font-color-hover;
-                        text-decoration: underline;
+                        &:hover {
+                            color: $font-color-hover;
+                            text-decoration: underline;
+                        }
                     }
                 }
-            }
-            
+            }  
         }
-        
     }
 
     // Desktop Style
@@ -149,36 +130,25 @@ body {
         section {
             padding-top: 7vh;
             flex-wrap: wrap;
-
         }
         #top-header {
             height: 20vh;
-            // background-color: aqua;
             background-image: url("../../../assets/images/background1.png");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-        
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        
-            
             div {
-                // background-color: aquamarine;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-        
-        
                 width: 70vw;
-        
                 h1 {
-                    // background-color: blanchedalmond;
-        
                     font-size: 55px;
                     font-family: $inter;
                     font-weight: normal;
@@ -189,13 +159,10 @@ body {
                     flex-direction: center;
                     height: 5vh;
                     width: 100%;
-                    // background-color: blue;
                 }
             }
-            
         }
         #profile {
-            // background-color: aqua;
             width: 100vw;
             height: auto;
             display: flex;
@@ -204,10 +171,7 @@ body {
             align-items: center;
             margin: 0;
             padding: 0;
-            
-            
             #image {
-                // background-color: aquamarine;
                 margin-top: 5vh;
                 align-items: center;
                 justify-content: center;
@@ -241,14 +205,13 @@ body {
                     }
                     a {
                         color: $font-color;
-                    }
-                    a:hover {
-                        color: $font-color-hover;
-                        text-decoration: underline;
+                        &:hover{
+                            color: $font-color-hover;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
-            
         }
     }
 }

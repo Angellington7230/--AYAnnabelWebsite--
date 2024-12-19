@@ -30,41 +30,28 @@ body {
     padding: 0;
     margin: 0;
     line-height: none;
- 
     @media(max-width: $mobile){
         section {
             padding-top: 7vh;
             flex-wrap: wrap;
-
         }
         #top-header {
             height: 20vh;
-            // background-color: aqua;
             background-image: url("../../../assets/images/background1.png");
-            // background-attachment: ;
             background-repeat: no-repeat;
             background-size: cover;
-        
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        
-            
             div {
-                // background-color: aquamarine;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-        
-        
                 width: 100vw;
-        
                 h1 {
-                    // background-color: blanchedalmond;
-        
                     font-size: 34px;
                     font-family: $inter;
                     font-weight: normal;
@@ -75,31 +62,26 @@ body {
                     flex-direction: center;
                     height: 5vh;
                     width: 80%;
-                    // background-color: blue;
+                    margin-bottom: 12px;
                     img {
                         height: 70%;
                     }
-                    margin-bottom: 12px;
                 }
             }
             
         }
-        #discography {
-            
+        #discography {      
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-
             margin-bottom: 20vh;
-          
             .container {
-                --columns: 2;
                 max-width: 30rem;
                 margin: 0 auto;
                 display: row;
-                columns: var(--columns);
+                columns: 2;
                 .image {
                     margin: 12px;
                     overflow: hidden;
@@ -118,51 +100,37 @@ body {
                         object-fit: cover;
                         transition: transform 0.3s ease-in-out;
                     }
+                    &:hover {
+                        opacity: 0.5;
+                    }
                 }
-                .image:hover {
-                    opacity: 0.5;
-                }
-            }
-            
-        }
-        
+            }   
+        }    
     }
-
     // Desktop Style
     @media (min-width: $desktop) {
         section {
             padding-top: 7vh;
             flex-wrap: wrap;
-
         }
         #top-header {
             height: 20vh;
-            // background-color: aqua;
             background-image: url("../../../assets/images/background1.png");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-        
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        
-            
             div {
-                // background-color: aquamarine;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-        
-        
                 width: 70vw;
-        
                 h1 {
-                    // background-color: blanchedalmond;
-        
                     font-size: 55px;
                     font-family: $inter;
                     font-weight: normal;
@@ -173,7 +141,6 @@ body {
                     flex-direction: center;
                     height: 5vh;
                     width: 100%;
-                    // background-color: blue;
                 }
             }
             
@@ -185,16 +152,13 @@ body {
             justify-content: center;
             flex-direction: row;
             flex-wrap: wrap;
-
             margin-bottom: 10vh;
-          
             .container {
-                --columns: 4;
                 max-width: 60rem;
                 margin: 0 auto;
                 display: row;
                 flex-wrap: wrap;
-                columns: var(--columns);
+                columns: 4;
                 .image {
                     margin: 12px;
                     overflow: hidden;
@@ -214,17 +178,13 @@ body {
                         object-fit: cover;
                         transition: transform 0.3s ease-in-out;
                     }
-                }
-                .image:hover {
-                    opacity: 0.5;
+                    &:image{
+                        opacity: 0.5;
+                    }
                 }
             }
             
-        }
-        
-            
-  
-        
+        }    
     }
 }
 

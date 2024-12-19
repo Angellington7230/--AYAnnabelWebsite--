@@ -55,11 +55,10 @@ body {
     margin-bottom: 20vh;
   }
   body #discography .container {
-    --columns: 2;
     max-width: 30rem;
     margin: 0 auto;
     display: row;
-    columns: var(--columns);
+    columns: 2;
   }
   body #discography .container .image {
     margin: 12px;
@@ -130,12 +129,11 @@ body {
     margin-bottom: 10vh;
   }
   body #discography .container {
-    --columns: 4;
     max-width: 60rem;
     margin: 0 auto;
     display: row;
     flex-wrap: wrap;
-    columns: var(--columns);
+    columns: 4;
   }
   body #discography .container .image {
     margin: 12px;
@@ -157,7 +155,7 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
-  body #discography .container .image:hover {
+  body #discography .container .image:image {
     opacity: 0.5;
   }
 }
