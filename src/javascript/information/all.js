@@ -1,7 +1,7 @@
-// Função para converter a data em formato "YYYY/MM/DD" para um objeto Date
+
 function parseDate(dateStr) {
     const parts = dateStr.split('/');
-    return new Date(parts[0], parts[1] - 1, parts[2]);  // Mês é 0-indexed (0 = janeiro)
+    return new Date(parts[0], parts[1] - 1, parts[2]);
 }
 
 // Função para buscar dados de um JSON
@@ -18,7 +18,6 @@ function fetchData(url, article) {
 
 // Função principal para buscar e ordenar todos os dados
 async function fetchAndDisplayData() {
-    // URLs dos JSONs
     const urls = [
         { article: "event", url: '../data/information/event.json' },
         { article: "live", url: '../data/information/live.json' },
@@ -27,14 +26,11 @@ async function fetchAndDisplayData() {
     ];
 
     try {
-        // Fetch os dados de todos os JSONs
         const allPosts = await Promise.all(urls.map(item => fetchData(item.url, item.article)));
 
-        // Unifica todos os posts em uma única lista
         const allPostsFlattened = allPosts.flat();
 
-        // Ordena os posts pela data
-        allPostsFlattened.sort((a, b) => b.date - a.date);  // Ordenação decrescente
+        allPostsFlattened.sort((a, b) => b.date - a.date); 
 
         return allPostsFlattened;  // Retorna os posts ordenados
     } catch (err) {
@@ -50,7 +46,6 @@ function displayPosts(posts) {
     background2.innerHTML = '';  // Limpa o conteúdo atual
 
     posts.forEach(post => {
-        // Cria o artigo principal
         const article = document.createElement("article");
         article.classList.add(post.article);  // Adiciona a classe conforme o tipo de post
 

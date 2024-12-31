@@ -155,7 +155,7 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
-  body #discography .container .image:hover {
+  body #discography .container .image:image {
     opacity: 0.5;
   }
 }
