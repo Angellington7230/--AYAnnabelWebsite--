@@ -246,6 +246,9 @@ time {
 }
  */
 
- #top-header #ornament img {
-    width: 80%;
-}
+ body #top-header div #ornament {
+  display: flex;
+  flex-direction: center;
+  height: 5vh;
+  width: 100%;
+}g
