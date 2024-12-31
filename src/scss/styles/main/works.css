@@ -174,8 +174,8 @@ time {
     width: calc(100vw - 91px);
   }
   .timeline ul li:nth-child(even) div {
-    
-    left: 45px;
+  
+    left: 40px;
   }
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
