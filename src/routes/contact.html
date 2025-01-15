@@ -82,17 +82,17 @@
             </div>
         </section>
         <section id="contact">
-            <form action="submit" id="form">
+            <form action="#" id="form" method="submit">
                 <p>Annabelへのお便り、お問い合わせ、
                     お仕事のご依頼はこちらよりお送り下さい。</p>
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name" >
+                <input type="text" id="name" name="name" placeholder="Name" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" >
+                <input type="email" id="email" name="email" placeholder="Email"  required>
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Message"   rows="5"></textarea>
+                <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
 
                 <button id="btn-modal" type="submit">Send</button>
             </form>
@@ -103,16 +103,22 @@
     <dialog id="contact-modal">
         <section id="modal">
             <div id="col">
-                <div id="row">
-                    <div id="col1">
-                        <p id="modal_name">Minerva Alves Barbosa</p>
-                    </div>
-                    <div id="col2">
-                        <p id="modal_email">superetro85@gmail.com</p>
-                    </div>
+                <div class="email">
+                    <p>Email:</p>
+                    <p id="modal_email"></p>
                 </div>
-                <div id="sample">
-                    <p id="modal_message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro natus iure adipisci reiciendis nemo culpa. Minima dolore impedit vitae expedita, culpa soluta porro ipsum nihil totam, officia recusandae reiciendis?</p>
+                <div class="message">
+                    <p id="modal_message"></p>
+                </div>
+                <div class="name">
+                    <p id="modal_name"></p>
+                </div>
+                <div class="row">
+                    <div class="btns">
+                        <button class="send_letter">send</button>
+                        <button class="back_letter">back</button>
+                    </div>
+                    <div class="flower_decoration"></div>
                 </div>
             </div>
         </section>
