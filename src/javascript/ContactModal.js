@@ -37,6 +37,7 @@ form.addEventListener("submit", (e) => {
   // Send Modal
   send_letter.addEventListener("click", () => {
     form.submit();
+    alert("Message Sent!");
     dialog.close();
   })
 })
