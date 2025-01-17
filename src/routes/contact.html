@@ -83,7 +83,7 @@
         </section>
         <!-- I'll use SMTP.js now -->
         <section id="contact">
-            <form id="form" method="post">
+            <form action="#" id="form">
                 <p>Annabelへのお便り、お問い合わせ、
                     お仕事のご依頼はこちらよりお送り下さい。</p>
                 <label for="name">Name</label>
@@ -95,7 +95,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
 
-                <button id="btn-modal" type="submit">Send</button>
+                <button type="submit">Send</button>
             </form>
             <div class="flower"><img src="" alt=""></div>
         </section>
@@ -130,11 +130,11 @@
     </footer>
 </body>
 
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <!-- SCRIPT MENU -->
 <script src="../javascript/menu.js"></script>
 <script src="../javascript/ContactModal.js"></script>
 <script src="../javascript/EmailSend.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-<script src="#"></script>
 </html>
