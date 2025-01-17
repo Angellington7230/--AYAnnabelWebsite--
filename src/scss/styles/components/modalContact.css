@@ -107,7 +107,6 @@ dialog {
   padding: 0;
 }
 #modal #col .row .btns button:hover {
-  backgroound: none;
   color: #CCCCCC;
   border: 1px #D0D0D0 solid;
 }
@@ -116,6 +115,116 @@ dialog {
   background-repeat: no-repeat;
   width: 200px;
   height: 200px;
+}
+
+@media (max-width: 775px) {
+  #modal {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+  }
+  #modal #col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #modal #col .email {
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: right;
+  }
+  #modal #col .email p {
+    padding: 0;
+    margin: 0;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 24px;
+    color: #555555;
+  }
+  #modal #col .message {
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: left;
+  }
+  #modal #col .message p {
+    padding: 0;
+    margin: 0;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 20px;
+    color: #757575;
+  }
+  #modal #col .message #modal_message {
+    white-space: pre-wrap;
+  }
+  #modal #col .name {
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: right;
+  }
+  #modal #col .name p {
+    padding: 0;
+    margin: 0;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 24px;
+    color: #757575;
+  }
+  #modal #col .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+  }
+  #modal #col .row .btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  #modal #col .row .btns .send_letter {
+    color: #1976D2;
+    border: 2px #D0D0D0 solid;
+    padding: 0px;
+  }
+  #modal #col .row .btns .back_letter {
+    border: 2px #1976D2 solid;
+    color: #1976D2;
+    padding: 0px;
+  }
+  #modal #col .row .btns button {
+    height: 42px;
+    width: 180px;
+    font-family: "Inter";
+    font-size: 20px;
+    color: #555555;
+    border: 1px #D0D0D0 solid;
+    border-radius: 5px;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition: 0.2s;
+  }
+  #modal #col .row .btns button p {
+    margin: 0;
+    padding: 0;
+  }
+  #modal #col .row .btns button:hover {
+    color: #CCCCCC;
+    border: 1px #D0D0D0 solid;
+  }
+  #modal #col .row .flower_decoration {
+    background-image: url("../../../assets/flower_modal.png");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /*# sourceMappingURL=modalContact.css.map */

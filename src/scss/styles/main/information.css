@@ -29,7 +29,6 @@ body .article-restored {
   body #top-header {
     height: 30vh;
     background-image: url("../../../assets/images/background1.png");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
