@@ -56,16 +56,15 @@ form.addEventListener("submit", (e) => {
 
 
   dialog.showModal();
-
-    // Close Modal
-  back_letter.addEventListener("click", () => {
-    dialog.close();
-  })
-
-  // Send Modal
-  send_letter.addEventListener("click", () => {
-    sendEmail();
-    dialog.close();
-  })
 })
 
+  // Send Modal
+send_letter.addEventListener("click", () => {
+  sendEmail();
+  dialog.close();
+})
+
+// Close Modal
+back_letter.addEventListener("click", () => {
+  dialog.close();
+})
